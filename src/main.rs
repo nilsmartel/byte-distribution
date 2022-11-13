@@ -17,7 +17,7 @@ fn main() -> io::Result<()> {
     let input = File::open(input)?;
     let input = BufReader::new(input);
 
-    let mut distr = [0usize; u8::MAX as usize];
+    let mut distr = [0usize; u8::MAX as usize + 1];
 
     for b in input.bytes() {
         let b = b.expect("read byte");
