@@ -33,5 +33,7 @@ fn main() -> io::Result<()> {
         writeln!(&mut out, "{index},{frequency}")?;
     }
 
+    out.flush()?;
+
     Ok(())
 }
